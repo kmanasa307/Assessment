@@ -1,0 +1,22 @@
+<div>
+  <button (click)="addBoard()">Add Board</button>
+</div>
+<div class="col-sm-4" *ngFor="let board of boards">
+  <div>
+    
+  </div>
+  <div class="card">
+    <h3 class="card-header">
+      {{ board.name }} <button (click)="deleteBoard(board.id)">Delete</button>
+    </h3>
+    <div class="card-body">
+      <b>Posts</b>
+      <ul>
+
+      </ul>
+    </div>
+    <div class="card-footer text-muted">
+      <small>Created {{ board.createdAt | date:short }}</small>
+    </div>
+  </div>
+</div>
